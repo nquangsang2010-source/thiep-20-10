@@ -1,1 +1,345 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quà tặng 20/10 🌷</title>
 
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: "Segoe UI", sans-serif;
+    background: linear-gradient(135deg, #ffe0ed, #fff5f8, #ffd6e7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    padding: 25px 12px;
+}
+
+.card {
+    position: relative;
+    width: 100%;
+    max-width: 650px;
+    padding: 38px 25px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.88);
+    border: 2px solid white;
+    border-radius: 28px;
+    box-shadow: 0 15px 45px #e878a544;
+    z-index: 1;
+    animation: appear 1s ease;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.flowers {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+h1 {
+    color: #f04488;
+    font-size: clamp(28px, 6vw, 43px);
+    margin-bottom: 12px;
+    text-shadow: 2px 2px 0 #ffe1ed;
+}
+
+.subtitle {
+    color: #c84b7c;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 22px;
+}
+
+.divider {
+    color: #ff6b9e;
+    font-size: 24px;
+    margin: 18px 0;
+}
+
+.message {
+    color: #654657;
+    font-size: 17px;
+    line-height: 1.9;
+    margin: 0 auto 20px;
+}
+
+.message strong {
+    color: #ec4384;
+}
+
+button {
+    border: none;
+    border-radius: 30px;
+    padding: 13px 23px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.main-btn {
+    color: white;
+    background: linear-gradient(135deg, #ff78aa, #ed4386);
+    box-shadow: 0 5px 15px #f0448844;
+}
+
+button:hover {
+    transform: translateY(-3px) scale(1.03);
+}
+
+#surprise {
+    display: none;
+    margin-top: 22px;
+    padding: 20px;
+    background: #fff0f6;
+    border-radius: 18px;
+    color: #d63d7b;
+    line-height: 1.9;
+    animation: appear 0.5s ease;
+}
+
+.controls {
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    z-index: 5;
+}
+
+.music-btn {
+    color: #c62d70;
+    background: white;
+    border: 1px solid #ffb4d0;
+    box-shadow: 0 4px 15px #d85c9140;
+}
+
+.footer {
+    margin-top: 28px;
+    color: #b96a8b;
+    font-size: 14px;
+}
+
+.floating {
+    position: fixed;
+    bottom: -50px;
+    pointer-events: none;
+    z-index: 0;
+    animation: fly linear forwards;
+}
+
+@keyframes fly {
+    from {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.85;
+    }
+    to {
+        transform: translateY(-115vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        padding: 30px 18px;
+    }
+
+    .message {
+        font-size: 15px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+    <div class="flowers">🌷🌸🌷</div>
+
+    <h1>Chúc mừng ngày 20/10</h1>
+
+    <div class="subtitle">
+        Gửi những bông hoa xinh đẹp của lớp mình 💗
+    </div>
+
+    <div class="divider">━━━━ 💕 💗 💕 ━━━━</div>
+
+    <div class="message">
+        Nhân ngày Phụ nữ Việt Nam 20/10,<br>
+        chúc tất cả các bạn nữ trong lớp luôn
+        <strong>xinh đẹp, vui vẻ và hạnh phúc</strong>! 🌸<br><br>
+
+        Chúc các bạn học tập thật tốt, luôn tự tin,
+        gặp nhiều may mắn và đạt được những điều mình mong muốn.<br><br>
+
+        Mong rằng mỗi ngày đến lớp đều là một ngày
+        tràn ngập tiếng cười và những kỷ niệm đẹp! 💖
+    </div>
+
+    <button class="main-btn" onclick="showSurprise()">
+        💌 Nhận lời chúc bí mật
+    </button>
+
+    <div id="surprise">
+        <h2>🌹 Gửi các bạn nữ thân mến 🌹</h2>
+        <p>
+            Cảm ơn các bạn vì đã góp phần làm cho lớp mình
+            trở nên vui vẻ và đáng nhớ hơn.<br>
+            Chúc các bạn luôn rạng rỡ như hoa,
+            mạnh mẽ theo cách riêng và luôn được yêu thương! 💐
+        </p>
+        <div style="font-size: 30px; margin-top: 12px;">
+            💗 🌷 🧸 🌷 💗
+        </div>
+    </div>
+
+    <div class="footer">
+        Được làm bằng ❤️ và một chút code<br>
+        <strong>From: Một thành viên của lớp 🌸</strong>
+    </div>
+</div>
+
+<div class="controls">
+    <button class="music-btn" id="musicButton" onclick="toggleMusic()">
+        🎵 Bật nhạc
+    </button>
+</div>
+
+<script>
+// Hiện lời chúc bí mật
+function showSurprise() {
+    const box = document.getElementById("surprise");
+
+    if (box.style.display === "block") {
+        box.style.display = "none";
+    } else {
+        box.style.display = "block";
+        createHearts(18);
+    }
+}
+
+// Tạo trái tim và hoa bay
+function createHearts(amount = 1) {
+    const symbols = ["💗", "💕", "🌸", "🌷", "💖", "✨"];
+
+    for (let i = 0; i < amount; i++) {
+        const item = document.createElement("div");
+
+        item.className = "floating";
+        item.textContent =
+            symbols[Math.floor(Math.random() * symbols.length)];
+
+        item.style.left = Math.random() * 100 + "vw";
+        item.style.fontSize = (18 + Math.random() * 22) + "px";
+        item.style.animationDuration = (5 + Math.random() * 6) + "s";
+
+        document.body.appendChild(item);
+
+        item.addEventListener("animationend", () => item.remove());
+    }
+}
+
+setInterval(() => createHearts(2), 800);
+
+// Nhạc nền nhẹ nhàng tạo bằng JavaScript
+let audioContext = null;
+let musicTimer = null;
+let musicOn = false;
+let noteIndex = 0;
+
+// Giai điệu đơn giản, không cần tải file nhạc
+const melody = [
+    523.25, 659.25, 783.99, 659.25,
+    587.33, 698.46, 783.99, 698.46,
+    523.25, 587.33, 659.25, 587.33,
+    392.00, 523.25, 659.25, 523.25
+];
+
+function playNote(frequency) {
+    if (!audioContext || !musicOn) return;
+
+    const oscillator = audioContext.createOscillator();
+    const gain = audioContext.createGain();
+
+    oscillator.type = "sine";
+    oscillator.frequency.value = frequency;
+
+    gain.gain.setValueAtTime(0.0001, audioContext.currentTime);
+    gain.gain.exponentialRampToValueAtTime(
+        0.055, audioContext.currentTime + 0.04
+    );
+    gain.gain.exponentialRampToValueAtTime(
+        0.0001, audioContext.currentTime + 0.42
+    );
+
+    oscillator.connect(gain);
+    gain.connect(audioContext.destination);
+
+    oscillator.start();
+    oscillator.stop(audioContext.currentTime + 0.45);
+}
+
+async function toggleMusic() {
+    const button = document.getElementById("musicButton");
+
+    if (musicOn) {
+        musicOn = false;
+        clearInterval(musicTimer);
+        button.textContent = "🎵 Bật nhạc";
+        return;
+    }
+
+    try {
+        const Audio = window.AudioContext || window.webkitAudioContext;
+
+        if (!Audio) {
+            alert("Trình duyệt này không hỗ trợ phát nhạc.");
+            return;
+        }
+
+        if (!audioContext) {
+            audioContext = new Audio();
+        }
+
+        await audioContext.resume();
+
+        musicOn = true;
+        button.textContent = "🔇 Tắt nhạc";
+
+        playNote(melody[noteIndex]);
+        noteIndex = (noteIndex + 1) % melody.length;
+
+        musicTimer = setInterval(() => {
+            if (musicOn) {
+                playNote(melody[noteIndex]);
+                noteIndex = (noteIndex + 1) % melody.length;
+            }
+        }, 480);
+    } catch (error) {
+        musicOn = false;
+        button.textContent = "🎵 Bật nhạc";
+        alert("Không thể bật nhạc. Bạn hãy thử lại nhé!");
+    }
+}
+</script>
+
+</body>
+</html>
